@@ -1,0 +1,13 @@
+<div class="progress-bar-container">
+  <div class="label-wrapper">
+    <p class="label-used">
+      <span>{{ used }}</span>GB
+    </p>
+    <p class="label-total">
+      <span>{{ total }}</span>GB
+    </p>
+  </div>
+  <div class="progress-bar">
+    <div class="bar" [ngStyle]="barStyle"></div>
+  </div>
+</div>
