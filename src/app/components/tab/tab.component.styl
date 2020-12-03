@@ -1,0 +1,39 @@
+.tab-container
+  display flex
+  justify-content center
+  align-items center
+  height 50px
+  width 186px
+  margin-right 20px
+  background #556F96
+  border-radius 15px 15px 0 0
+  cursor pointer
+
+  .context
+    display flex
+    justify-content center
+    align-items center
+    width 100%
+    height 28px
+    p
+      margin 0
+      font-size 16px
+      color white
+      font-weight bold
+
+.active
+  background #ffffff
+  .context
+    position relative
+    p
+      color #556F96
+    &::before
+      content ''
+      width 8px
+      height 28px
+      background #556F96
+      position absolute
+      left 0
+      top 50%
+      transform translateY(-50%)
+
