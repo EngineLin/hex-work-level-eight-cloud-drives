@@ -19,7 +19,6 @@ export class DriveCapacityProgressBarComponent implements OnInit {
 
   runProgress(): void {
     const percent = 100 - (this.used / this.total) * 100;
-    console.log(percent);
     this.barStyle = {
       right: `${percent}%`
     };

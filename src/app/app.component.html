@@ -23,6 +23,41 @@
 </style>
 
 <div class="content" role="main">
-  <app-header></app-header>
-  <app-plus-button (clickEvent)="onButtonClick('add-dir')"></app-plus-button>
+  <div class="container">
+    <app-header></app-header>
+
+    <div class="dashboard-container">
+      <div class="main-container">
+        <div class="main-top">
+          <app-tab
+            *ngFor="let tab of tabs"
+            [label]="tab.label"
+            [value]="tab.value"
+          ></app-tab>
+          <div class="toggle-wrapper">
+            <app-toggle
+              *ngFor="let toggle of toggles"
+              [type]="toggle"
+            ></app-toggle>
+          </div>
+        </div>
+        <div class="main-body">
+          <div class="table-container">
+            <app-table></app-table>
+          </div>
+          <app-plus-button
+            (clickEvent)="onButtonClick('add-dir')"
+          ></app-plus-button>
+          <app-plus-button
+            (clickEvent)="onButtonClick('add-dir')"
+          ></app-plus-button>
+        </div>
+
+      </div>
+
+      <div class="aside-container">
+        aside...
+      </div>
+    </div>
+  </div>
 </div>
