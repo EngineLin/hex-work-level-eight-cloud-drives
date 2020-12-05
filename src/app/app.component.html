@@ -24,10 +24,14 @@
 
 <div class="content" role="main">
   <div class="container">
+    <!--Header-->
     <app-header></app-header>
 
+    <!--Dashboard-->
     <div class="dashboard-container">
       <div class="main-container">
+
+        <!--Tab and Toggle-->
         <div class="main-top">
           <app-tab
             *ngFor="let tab of tabs"
@@ -41,23 +45,29 @@
             ></app-toggle>
           </div>
         </div>
+
+        <!--List and Grid-->
         <div class="main-body">
           <div class="table-container">
-            <app-table></app-table>
+            <app-list *ngIf="toggleValue === TOGGLE_TYPE.LIST"></app-list>
+            <app-grid *ngIf="toggleValue === TOGGLE_TYPE.GRID"></app-grid>
           </div>
-          <app-plus-button
-            (clickEvent)="onButtonClick('add-dir')"
-          ></app-plus-button>
-          <app-plus-button
-            (clickEvent)="onButtonClick('add-dir')"
-          ></app-plus-button>
+          <div class="button-container">
+            <div class="plus-button-container">
+              <app-plus-button (clickEvent)="onButtonClick('新增資料夾')"></app-plus-button>
+              <p class="label">新增資料夾</p>
+            </div>
+            <div class="plus-button-container">
+              <app-plus-button (clickEvent)="onButtonClick('新增檔案')"></app-plus-button>
+              <p class="label">新增檔案</p>
+            </div>
+          </div>
         </div>
 
       </div>
 
-      <div class="aside-container">
-        aside...
-      </div>
+      <!--Aside-->
+      <app-aside></app-aside>
     </div>
   </div>
 </div>

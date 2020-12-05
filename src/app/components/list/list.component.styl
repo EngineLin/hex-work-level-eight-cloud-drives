@@ -1,0 +1,28 @@
+table, th, td
+  border-collapse collapse
+
+table
+  width 100%
+  thead
+    .head
+      border-bottom 1px solid #F5F5F5
+      th
+        padding 15px 0
+        text-align start
+        span
+          margin-right 8px
+      .operator
+        display flex
+        justify-content center
+
+  tbody
+    .row
+      cursor pointer
+      th, td
+        padding 15px 0
+        text-align start
+      &:hover
+        background #F5F5F5
+      .operator
+        display flex
+        justify-content center

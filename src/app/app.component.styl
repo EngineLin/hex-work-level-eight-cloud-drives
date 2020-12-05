@@ -30,13 +30,25 @@
           height 500px
           background #ffffff
           border-radius 0 8px 8px 8px
+          box-sizing border-box
+          padding 30px 50px
           .table-container
             height 400px
-            padding 30px 50px 0
+            overflow-y scroll
+          .button-container
+            display flex
+            justify-content start
+            align-items center
+            .plus-button-container
+              display flex
+              justify-content flex-start
+              align-content center
+              p
+                display flex
+                justify-content center
+                align-items center
+                margin 0 0 0 15px
+                font-size 14px
+              &:first-child
+                margin-right 30px
 
-      .aside-container
-        width 210px
-        height 500px
-        background #ffffff
-        border-radius 8px
-        margin-left 30px

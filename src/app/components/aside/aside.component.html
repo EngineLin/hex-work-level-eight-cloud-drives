@@ -1,0 +1,74 @@
+<div class="aside-container">
+  <div
+    *ngIf="fileData"
+    class="detail"
+  >
+    <div class="basic">
+      <div class="name">
+        <p>{{ fileData.name }}</p>
+      </div>
+      <div class="content-item">
+        <label for="updateTime">修改日期</label>
+        <p id="updateTime">{{ fileData.updateTime | date: 'yyyy.MM.DD hh:mm' }}</p>
+      </div>
+      <div class="content-item">
+        <label for="type">類型</label>
+        <p id="type">{{ fileData.type | fileType }}</p>
+      </div>
+      <div class="content-item">
+        <label for="owner">擁有人</label>
+        <p id="owner">{{ fileData.owner }}</p>
+      </div>
+      <div class="content-item">
+        <label for="size">大小</label>
+        <p id="size">{{ fileData.size | fileSize }}</p>
+      </div>
+    </div>
+    <div class="context">
+      <h3>預覽內容</h3>
+      <div
+        [ngSwitch]="fileData.type"
+        class="context-main"
+      >
+       <div
+         *ngSwitchCase="FILE_TYPE.FOLDER"
+         class="folder"
+       >
+         <div
+           *ngFor="let file of fileData.content"
+           class="file-item">
+           <svg-icon [src]="FILE_TYPE_TO_ICON_PATH_ADAPTER[file.type]"></svg-icon>
+           <p>{{ file.name }}</p>
+         </div>
+       </div>
+        <div
+          *ngSwitchCase="FILE_TYPE.PICTURE"
+          class="photo"
+        >
+          <img
+            [src]="fileData.content"
+            [alt]="fileData.name"
+          >
+        </div>
+        <div
+          *ngSwitchCase="FILE_TYPE.VIDEO"
+          class="video"
+        >
+          <video [src]="fileData.content"></video>
+        </div>
+        <div
+          *ngSwitchCase="FILE_TYPE.DOCUMENT"
+          class="document"
+        >
+          <p>{{ fileData.content }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    *ngIf="!fileData"
+    class="empty"
+  >
+    <p>點擊資料查看詳細內容</p>
+  </div>
+</div>

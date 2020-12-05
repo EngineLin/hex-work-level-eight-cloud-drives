@@ -1,5 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -13,9 +15,14 @@ import { AvatarComponent } from './components/avatar/avatar.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { TabComponent } from './components/tab/tab.component';
 import { ToggleComponent } from './components/toggle/toggle.component';
-import { TableComponent } from './components/table/table.component';
-import { TableRowComponent } from './components/table-row/table-row.component';
-import { TableToolBoxComponent } from './components/table-tool-box/table-tool-box.component';
+import { FavoriteButtonComponent } from './components/favorite-button/favorite-button.component';
+import { ArrowButtonComponent } from './components/arrow-button/arrow-button.component';
+import { ListComponent } from './components/list/list.component';
+import { GridComponent } from './components/grid/grid.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { AsideComponent } from './components/aside/aside.component';
+import { FileTypePipe } from './utils/file-type.pipe';
+import { FileSizePipe } from './utils/file-size.pipe';
 
 @NgModule({
   declarations: [
@@ -28,13 +35,20 @@ import { TableToolBoxComponent } from './components/table-tool-box/table-tool-bo
     LogoComponent,
     TabComponent,
     ToggleComponent,
-    TableComponent,
-    TableRowComponent,
-    TableToolBoxComponent
+    FavoriteButtonComponent,
+    ArrowButtonComponent,
+    ListComponent,
+    GridComponent,
+    BreadcrumbComponent,
+    AsideComponent,
+    FileTypePipe,
+    FileSizePipe,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    AngularSvgIconModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

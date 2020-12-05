@@ -1,0 +1,14 @@
+<div
+  role="button"
+  class="favorite-button-container"
+  (click)="onClick()"
+>
+  <svg-icon
+    *ngIf="localActive"
+    src="assets/bookmark.svg"
+  ></svg-icon>
+  <svg-icon
+    *ngIf="!localActive"
+    src="assets/bookmark_unselected.svg"
+  ></svg-icon>
+</div>

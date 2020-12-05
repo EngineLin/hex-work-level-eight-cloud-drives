@@ -1,0 +1,15 @@
+<div
+  *ngIf="paths.length < 2"
+  class="breadcrumb-container"
+>
+  <div class="basic-text-container">
+    <p>{{ paths[0] }}</p>
+  </div>
+  <div
+    class="path-text-container"
+    *ngFor="let path of paths.slice(1)"
+  >
+    <svg-icon src="assets/arrow_breadcrumbs.svg"></svg-icon>
+    <p>{{ path }}</p>
+  </div>
+</div>

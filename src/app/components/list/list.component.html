@@ -1,0 +1,76 @@
+<table>
+  <thead>
+  <tr class="head">
+    <th
+      scope="col"
+      class="operator"
+    ></th>
+    <th scope="col">
+      <span>名稱</span>
+      <app-arrow-button
+        [active]="sortType === SORT_TYPE.NAME"
+        (clickEvent)="onSortClick(SORT_TYPE.NAME)"
+      ></app-arrow-button>
+    </th>
+    <th scope="col">
+      <span>修改日期</span>
+      <app-arrow-button
+        [active]="sortType === SORT_TYPE.UPDATE_TIME"
+        (clickEvent)="onSortClick(SORT_TYPE.UPDATE_TIME)"
+      ></app-arrow-button>
+    </th>
+    <th scope="col">
+      <span>類型</span>
+      <app-arrow-button
+        [active]="sortType === SORT_TYPE.TYPE"
+        (clickEvent)="onSortClick(SORT_TYPE.TYPE)"
+      ></app-arrow-button>
+    </th>
+    <th scope="col">
+      <span>擁有人</span>
+      <app-arrow-button
+        [active]="sortType === SORT_TYPE.OWNER"
+        (clickEvent)="onSortClick(SORT_TYPE.OWNER)"
+      ></app-arrow-button>
+    </th>
+    <th scope="col">
+      <span>大小</span>
+      <app-arrow-button
+        [active]="sortType === SORT_TYPE.SIZE"
+        (clickEvent)="onSortClick(SORT_TYPE.SIZE)"
+      ></app-arrow-button>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr
+    *ngFor="let row of localTableData; let index = index"
+    (click)="onRowClick(row)"
+    (dblclick)="onRowDoubleClick(row)"
+    class="row"
+  >
+    <th
+      scope="row"
+      class="operator"
+    >
+      <app-favorite-button
+        [active]="row.favorite"
+        [id]="row.id"
+       ></app-favorite-button>
+    </th>
+    <td>
+      <svg-icon
+        [src]="FILE_TYPE_TO_ICON_PATH_ADAPTER[row.type]"
+        style="margin-right: 8px;"
+      ></svg-icon>
+      {{ row.name }}
+    </td>
+    <td>{{ row.updateTime |  date: "yyyy/mm/dd hh:mm:ss"}}</td>
+    <td>
+      {{ row.type | fileType }}
+    </td>
+    <td>{{ row.owner }}</td>
+    <td>{{ row.size | fileSize }}</td>
+  </tr>
+  </tbody>
+</table>
