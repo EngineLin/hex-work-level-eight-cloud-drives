@@ -1,0 +1,8 @@
+{
+  "name": "Engine Lin",
+  "avatarUrl": "http://localhost:3000/static/avatar.png",
+  "drive": {
+    "used": 55,
+    "total": 100
+  }
+}
