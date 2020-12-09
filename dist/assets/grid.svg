@@ -1,0 +1,11 @@
+<svg id="grid" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <path id="Path_32" data-name="Path 32" d="M0,0H4.3V4.3H0ZM0,0" fill="#556f96"/>
+  <path id="Path_33" data-name="Path 33" d="M373.5,0h4.3V4.3h-4.3Zm0,0" transform="translate(-361.797)" fill="#556f96"/>
+  <path id="Path_34" data-name="Path 34" d="M186.75,0h4.3V4.3h-4.3Zm0,0" transform="translate(-180.898)" fill="#556f96"/>
+  <path id="Path_35" data-name="Path 35" d="M0,186.75H4.3v4.3H0Zm0,0" transform="translate(0 -180.898)" fill="#556f96"/>
+  <path id="Path_36" data-name="Path 36" d="M373.5,186.75h4.3v4.3h-4.3Zm0,0" transform="translate(-361.797 -180.898)" fill="#556f96"/>
+  <path id="Path_37" data-name="Path 37" d="M186.75,186.75h4.3v4.3h-4.3Zm0,0" transform="translate(-180.898 -180.898)" fill="#556f96"/>
+  <path id="Path_38" data-name="Path 38" d="M0,373.5H4.3v4.3H0Zm0,0" transform="translate(0 -361.797)" fill="#556f96"/>
+  <path id="Path_39" data-name="Path 39" d="M373.5,373.5h4.3v4.3h-4.3Zm0,0" transform="translate(-361.797 -361.797)" fill="#556f96"/>
+  <path id="Path_40" data-name="Path 40" d="M186.75,373.5h4.3v4.3h-4.3Zm0,0" transform="translate(-180.898 -361.797)" fill="#556f96"/>
+</svg>
