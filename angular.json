@@ -20,11 +20,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/level-eight-cloud-drives",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "baseHref": "/hex-work-level-eight-cloud-drives/",
+            "deployUrl": "/hex-work-level-eight-cloud-drives/",
             "aot": true,
             "assets": [
               "src/favicon.ico",
