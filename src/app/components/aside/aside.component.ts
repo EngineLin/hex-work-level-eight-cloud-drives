@@ -15,6 +15,10 @@ export class AsideComponent implements OnInit {
   FILE_TYPE = FILE_TYPE;
   FILE_TYPE_TO_ICON_PATH_ADAPTER = FILE_TYPE_TO_ICON_PATH_ADAPTER;
 
+  get fileDataContent(): ITableRow[] | null {
+    return this.fileData?.content as ITableRow[];
+  }
+
   ngOnInit(): void {
     this.init();
   }

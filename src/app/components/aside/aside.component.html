@@ -35,7 +35,7 @@
          class="folder"
        >
          <div
-           *ngFor="let file of fileData.content"
+           *ngFor="let file of fileDataContent"
            class="file-item">
            <svg-icon [src]="FILE_TYPE_TO_ICON_PATH_ADAPTER[file.type]"></svg-icon>
            <p>{{ file.name }}</p>

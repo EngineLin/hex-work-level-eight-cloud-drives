@@ -1,5 +1,5 @@
 const express = require('express');
-const userInfoData = require('../db/user-info')
+const userInfoData = require('../db/user-info');
 
 const router = express.Router();
 

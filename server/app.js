@@ -7,7 +7,7 @@ const filesRouter = require('./router/files');
 const searchRouter = require('./router/search');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -20,7 +20,7 @@ app.use('/search', searchRouter);
 app.use('/static', express.static('assets'));
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at https://level-eight-cloud-drives-apis.herokuapp.com:${port}`);
 });
 
 

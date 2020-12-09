@@ -41,7 +41,7 @@
     "type": 1,
     "owner": "Engine Lin",
     "size": 1228,
-    "content": "http://localhost:3000/static/myself.jpeg"
+    "content": "https://level-eight-cloud-drives-apis.herokuapp.com/static/myself.jpeg"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "type": 2,
     "owner": "Engine Lin",
     "size": 200000,
-    "content": "http://localhost:3000/static/movie.mp4"
+    "content": "https://level-eight-cloud-drives-apis.herokuapp.com/static/movie.mp4"
   },
   { "id": 6,
     "favorite": false,
@@ -62,7 +62,7 @@
     "type": 1,
     "owner": "Engine Lin",
     "size": 2500,
-    "content": "http://localhost:3000/static/haha.jpeg"
+    "content": "https://level-eight-cloud-drives-apis.herokuapp.com/static/haha.jpeg"
   },
   {
     "id": 7,
@@ -84,7 +84,7 @@
     "type": 1,
     "owner": "Engine Lin",
     "size": 100000,
-    "content": "http://localhost:3000/static/fun1.jpg"
+    "content": "https://level-eight-cloud-drives-apis.herokuapp.com/static/fun1.jpg"
   },
   {
     "id": 9,
@@ -95,7 +95,7 @@
     "type": 1,
     "owner": "Engine Lin",
     "size": 100000,
-    "content": "http://localhost:3000/static/fun2.jpg"
+    "content": "https://level-eight-cloud-drives-apis.herokuapp.com/static/fun2.jpg"
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@
     "type": 1,
     "owner": "Engine Lin",
     "size": 100000,
-    "content": "http://localhost:3000/static/cat1.jpg"
+    "content": "https://level-eight-cloud-drives-apis.herokuapp.com/static/cat1.jpg"
   },
   {
     "id": 12,
@@ -139,7 +139,7 @@
     "type": 1,
     "owner": "Engine Lin",
     "size": 100000,
-    "content": "http://localhost:3000/static/dog1.jpg"
+    "content": "https://level-eight-cloud-drives-apis.herokuapp.com/static/dog1.jpg"
   },
   {
     "id": 14,
@@ -150,7 +150,7 @@
     "type": 1,
     "owner": "Engine Lin",
     "size": 100000,
-    "content": "http://localhost:3000/static/cat2.jpg"
+    "content": "https://level-eight-cloud-drives-apis.herokuapp.com/static/cat2.jpg"
   },
   {
     "id": 15,
@@ -161,6 +161,6 @@
     "type": 1,
     "owner": "Engine Lin",
     "size": 100000,
-    "content": "http://localhost:3000/static/dog2.jpeg"
+    "content": "https://level-eight-cloud-drives-apis.herokuapp.com/static/dog2.jpeg"
   }
 ]

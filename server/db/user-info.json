@@ -1,6 +1,6 @@
 {
   "name": "Engine Lin",
-  "avatarUrl": "http://localhost:3000/static/avatar.png",
+  "avatarUrl": "https://level-eight-cloud-drives-apis.herokuapp.com/static/avatar.png",
   "drive": {
     "used": 55,
     "total": 100
