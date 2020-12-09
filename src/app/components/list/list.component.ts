@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FILE_TYPE, FILE_TYPE_TO_ICON_PATH_ADAPTER, FILE_TYPE_TO_NAME } from 'src/app/utils/FILE_TYPE';
+import { FILE_TYPE, FILE_TYPE_TO_ICON_PATH_ADAPTER } from 'src/app/utils/FILE_TYPE';
 import { FileService, ITableRow } from '../../services/file.service';
+import { NavigatorService } from '../../services/navigator.service';
 
 export enum SORT_TYPE {
   NAME,
@@ -24,12 +25,15 @@ const sortTypeToPropertyAdapter = {
   styleUrls: ['./list.component.styl']
 })
 export class ListComponent implements OnInit {
-  constructor(private filesService: FileService) {
-  }
+  constructor(
+    private filesService: FileService,
+    private navigatorService: NavigatorService
+  ) {}
 
   sortType = SORT_TYPE.NAME;
 
   tableData: ITableRow[] = [];
+  paths: string[] = [];
 
   SORT_TYPE = SORT_TYPE;
   FILE_TYPE_TO_ICON_PATH_ADAPTER = FILE_TYPE_TO_ICON_PATH_ADAPTER;
@@ -49,6 +53,7 @@ export class ListComponent implements OnInit {
 
   init(): void {
     this.filesService.subFiles$.subscribe(value => this.tableData = value);
+    this.navigatorService.subPaths$.subscribe(value => this.paths = value);
   }
 
   onSortClick(sortType: SORT_TYPE): void {
@@ -61,7 +66,12 @@ export class ListComponent implements OnInit {
 
   onRowDoubleClick(row: ITableRow): void {
     if (row.type === FILE_TYPE.FOLDER) {
+      this.navigatorService.setPaths([...this.paths, row.name]);
       this.filesService.fetchFolder(row.id);
+      return;
     }
+
+    this.filesService.fetchContent(row.id);
+    this.filesService.setIsOpen(true);
   }
 }

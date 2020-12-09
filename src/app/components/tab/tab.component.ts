@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { NavigatorService, TAB_TYPE } from '../../services/navigator.service';
+import { NavigatorService, TAB_TYPE, TAB_TYPE_TO_TAB_NAME } from '../../services/navigator.service';
 
 @Component({
   selector: 'app-tab',
@@ -26,5 +26,6 @@ export class TabComponent implements OnInit {
 
   onClick(): void {
     this.navigatorService.setTab(this.value);
+    this.navigatorService.setPaths([TAB_TYPE_TO_TAB_NAME[this.value]]);
   }
 }

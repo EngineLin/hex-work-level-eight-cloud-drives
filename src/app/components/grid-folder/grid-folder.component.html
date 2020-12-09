@@ -1,0 +1,15 @@
+<div
+  class="grid-folder-container"
+  (click)="onClick()"
+  (dblclick)="onDoubleClick()"
+>
+  <svg-icon
+    src="assets/folder.svg"
+    class="type-icon"
+  ></svg-icon>
+  <p class="name">{{ data.name }}</p>
+  <app-favorite-button
+    [active]="data.favorite"
+    [id]="data.id"
+  ></app-favorite-button>
+</div>

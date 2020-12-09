@@ -48,6 +48,7 @@
 
         <!--List and Grid-->
         <div class="main-body">
+          <app-breadcrumb></app-breadcrumb>
           <div class="table-container">
             <app-list *ngIf="toggleValue === TOGGLE_TYPE.LIST"></app-list>
             <app-grid *ngIf="toggleValue === TOGGLE_TYPE.GRID"></app-grid>
@@ -71,3 +72,5 @@
     </div>
   </div>
 </div>
+
+<app-file-popup></app-file-popup>

@@ -1,1 +1,34 @@
-<p>grid works!</p>
+<div class="grid-container">
+  <div
+    class="folder-container"
+    *ngIf="folders.length"
+  >
+    <h3 class="label">
+     資料夾
+    </h3>
+    <div class="folder-wrapper">
+      <app-grid-folder
+        *ngFor="let folder of folders"
+        [data]="folder"
+        (clickEvent)="onFolderClick($event)"
+        (doubleClickEvent)="onFolderDoubleClick($event)"
+      ></app-grid-folder>
+    </div>
+  </div>
+  <div
+    class="file-container"
+    *ngIf="files.length"
+  >
+    <h3 class="label">
+      檔案
+    </h3>
+    <div class="file-wrapper">
+      <app-grid-file
+        *ngFor="let file of files"
+        [data]="file"
+        (clickEvent)="onFileClick($event)"
+        (doubleClickEvent)="onFileDoubleClick($event)"
+      ></app-grid-file>
+    </div>
+  </div>
+</div>

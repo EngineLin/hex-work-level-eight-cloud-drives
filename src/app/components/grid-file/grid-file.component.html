@@ -1,0 +1,31 @@
+<div class="grid-file-container"
+  (click)="onClick()"
+  (dblclick)="onDoubleClick()"
+>
+  <div class="top-container">
+    <img
+      *ngIf="data.type === FILE_TYPE.PICTURE"
+      [src]="data.content"
+      [alt]="data.name"
+    />
+    <video
+      *ngIf="data.type === FILE_TYPE.VIDEO"
+      [src]="data.content"
+    ></video>
+    <svg-icon
+      *ngIf="data.type === FILE_TYPE.DOCUMENT"
+      src="assets/document.svg"
+    ></svg-icon>
+  </div>
+  <div class="bottom-container">
+    <svg-icon
+      [src]="FILE_TYPE_TO_ICON_PATH_ADAPTER[data.type]"
+      class="type-icon"
+    ></svg-icon>
+    <p class="name">{{ data.name }}</p>
+    <app-favorite-button
+      [active]="data.favorite"
+      [id]="data.id"
+    ></app-favorite-button>
+  </div>
+</div>

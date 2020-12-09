@@ -13,15 +13,48 @@
     background #556F96
     cursor pointer
 
-  label
+  .input-container
+    position relative
     flex 1
-    .input
+    label
+      .input
+        box-sizing border-box
+        width 100%
+        height 32px
+        border unset
+        font-size 18px
+        padding 0 5px
+        &:focus
+          outline unset
+    .complete-container
+      box-sizing border-box
+      transition ease height 250ms
+      position absolute
       width 100%
-      height 32px
-      border unset
-      font-size 18px
-      &:focus
-        outline unset
+      top 100%
+      left 0
+      right 0
+      z-index 99
+      background white
+      overflow hidden
+      .complete-item
+        padding 5px
+        cursor pointer
+        &:hover
+          background #F5F5F5
+        p
+          margin 0
+          font-size 18px
+  .active
+    label
+      .input
+        border-top 1px solid black
+        border-right 1px solid black
+        border-left 1px solid black
+    .complete-container
+      border-bottom 1px solid black
+      border-right 1px solid black
+      border-left 1px solid black
 
   .draw-button
     width 32px

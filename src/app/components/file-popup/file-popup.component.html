@@ -1,0 +1,25 @@
+<div
+  class="file-popup-container"
+  [class.active]="isOpen"
+  (click)="onPopupClick()"
+>
+  <p class="name">{{data.name}}</p>
+  <div class="player">
+    <img
+      *ngIf="data.type === FILE_TYPE.PICTURE"
+      [src]="data.content"
+      [alt]="data.name"
+    >
+    <video
+      *ngIf="data.type === FILE_TYPE.VIDEO"
+      [src]="data.content"
+      autoplay
+    ></video>
+    <div
+      *ngIf="data.type === FILE_TYPE.DOCUMENT"
+      class="document"
+    >
+      <p>{{ data.content }}</p>
+    </div>
+  </div>
+</div>

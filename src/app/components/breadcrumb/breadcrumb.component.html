@@ -1,8 +1,11 @@
 <div
-  *ngIf="paths.length < 2"
+  *ngIf="paths.length >= 2"
   class="breadcrumb-container"
 >
-  <div class="basic-text-container">
+  <div
+    class="basic-text-container"
+    (click)="onClick(paths[0])"
+  >
     <p>{{ paths[0] }}</p>
   </div>
   <div

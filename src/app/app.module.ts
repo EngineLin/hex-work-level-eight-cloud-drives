@@ -23,6 +23,9 @@ import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.componen
 import { AsideComponent } from './components/aside/aside.component';
 import { FileTypePipe } from './utils/file-type.pipe';
 import { FileSizePipe } from './utils/file-size.pipe';
+import { GridFolderComponent } from './components/grid-folder/grid-folder.component';
+import { GridFileComponent } from './components/grid-file/grid-file.component';
+import { FilePopupComponent } from './components/file-popup/file-popup.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { FileSizePipe } from './utils/file-size.pipe';
     AsideComponent,
     FileTypePipe,
     FileSizePipe,
+    GridFolderComponent,
+    GridFileComponent,
+    FilePopupComponent,
   ],
   imports: [
     BrowserModule,

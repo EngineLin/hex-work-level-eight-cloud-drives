@@ -2,10 +2,33 @@
   <div class="search-button">
     <svg-icon src="assets/search.svg"></svg-icon>
   </div>
-  <label>
-    <input type="text" class="input">
-  </label>
-  <div class="draw-button">
+  <div class="input-container" [class.active]="complete.length">
+    <label>
+      <input
+        type="text"
+        class="input"
+        [value]="text"
+        (input)="onType($event)"
+        (keydown.enter)="onEnter()"
+      >
+    </label>
+    <div
+      class="complete-container"
+      [ngStyle]="completeStyle"
+    >
+      <div
+        *ngFor="let item of complete"
+        (click)="onCompleteItemClick(item)"
+        class="complete-item"
+      >
+        <p>{{ item }}</p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="draw-button"
+    (click)="onMoreClick()"
+  >
     <svg-icon src="assets/down-arrow.svg"></svg-icon>
   </div>
 </div>
